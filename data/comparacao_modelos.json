@@ -1,0 +1,143 @@
+{
+  "criterios": [
+    "clareza",
+    "citacao_fonte",
+    "aviso_limite",
+    "completude"
+  ],
+  "escala": "0 a 2 por critério",
+  "amostras": [
+    {
+      "pergunta": "Como consultar meu CPF?",
+      "id_recuperado_a": [
+        "DOC-001"
+      ],
+      "id_recuperado_b": [
+        "DOC-001"
+      ],
+      "notas_a": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 2
+      },
+      "notas_b": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 1
+      },
+      "total_a": 8,
+      "total_b": 7
+    },
+    {
+      "pergunta": "Como criar conta no gov.br?",
+      "id_recuperado_a": [
+        "DOC-006"
+      ],
+      "id_recuperado_b": [
+        "DOC-006"
+      ],
+      "notas_a": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 2
+      },
+      "notas_b": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 1
+      },
+      "total_a": 8,
+      "total_b": 7
+    },
+    {
+      "pergunta": "Quando procurar o Procon?",
+      "id_recuperado_a": [
+        "COM-001"
+      ],
+      "id_recuperado_b": [
+        "COM-001"
+      ],
+      "notas_a": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 2
+      },
+      "notas_b": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 0,
+        "completude": 1
+      },
+      "total_a": 8,
+      "total_b": 5
+    },
+    {
+      "pergunta": "Como tirar o cartão SUS?",
+      "id_recuperado_a": [
+        "SRV-004"
+      ],
+      "id_recuperado_b": [
+        "SRV-004"
+      ],
+      "notas_a": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 2
+      },
+      "notas_b": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 1
+      },
+      "total_a": 8,
+      "total_b": 7
+    },
+    {
+      "pergunta": "Para que serve o Disque 100?",
+      "id_recuperado_a": [
+        "COM-002"
+      ],
+      "id_recuperado_b": [
+        "COM-002"
+      ],
+      "notas_a": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 2,
+        "completude": 2
+      },
+      "notas_b": {
+        "clareza": 2,
+        "citacao_fonte": 2,
+        "aviso_limite": 0,
+        "completude": 1
+      },
+      "total_a": 8,
+      "total_b": 5
+    }
+  ],
+  "medias_a": {
+    "clareza": 2.0,
+    "citacao_fonte": 2.0,
+    "aviso_limite": 2.0,
+    "completude": 2.0
+  },
+  "medias_b": {
+    "clareza": 2.0,
+    "citacao_fonte": 2.0,
+    "aviso_limite": 1.2,
+    "completude": 1.0
+  },
+  "total_medio_a": 8.0,
+  "total_medio_b": 6.2,
+  "taxa_id_modelo_a": 100.0,
+  "modelo_padrao": "A",
+  "justificativa": "A recuperação do id é a mesma nos dois modelos (o template não altera a busca). Na rubrica qualitativa (clareza, citação, aviso de limite, completude), o Modelo A soma 8.0/8 em média e o Modelo B soma 6.2/8. O Modelo A é o padrão por incluir papel do assistente e aviso explícito de não oficialidade, mais adequado à orientação cidadã responsável."
+}

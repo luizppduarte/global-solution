@@ -1,0 +1,109 @@
+{
+  "descricao": "Bateria de testes do Citizen Assist AI (casos diretos, reformulações e limites)",
+  "perguntas": [
+    {
+      "id": "T01",
+      "pergunta": "Como consultar meu CPF?",
+      "tipo": "direta",
+      "id_esperado": "DOC-001"
+    },
+    {
+      "id": "T02",
+      "pergunta": "Quero renovar a carteira de motorista",
+      "tipo": "reformulacao",
+      "id_esperado": "DOC-004"
+    },
+    {
+      "id": "T03",
+      "pergunta": "Como criar conta no gov.br?",
+      "tipo": "direta",
+      "id_esperado": "DOC-006"
+    },
+    {
+      "id": "T04",
+      "pergunta": "O que é Cadastro Único?",
+      "tipo": "direta",
+      "id_esperado": "SRV-001"
+    },
+    {
+      "id": "T05",
+      "pergunta": "Tenho direito ao Bolsa Família?",
+      "tipo": "reformulacao",
+      "id_esperado": "SRV-002"
+    },
+    {
+      "id": "T06",
+      "pergunta": "Como usar o Meu INSS?",
+      "tipo": "reformulacao",
+      "id_esperado": "SRV-003"
+    },
+    {
+      "id": "T07",
+      "pergunta": "Como tirar o cartão SUS?",
+      "tipo": "direta",
+      "id_esperado": "SRV-004"
+    },
+    {
+      "id": "T08",
+      "pergunta": "Quero reclamar de uma empresa no consumidor.gov",
+      "tipo": "reformulacao",
+      "id_esperado": "SRV-005"
+    },
+    {
+      "id": "T09",
+      "pergunta": "Quando procurar o Procon?",
+      "tipo": "direta",
+      "id_esperado": "COM-001"
+    },
+    {
+      "id": "T10",
+      "pergunta": "Para que serve o Disque 100?",
+      "tipo": "direta",
+      "id_esperado": "COM-002"
+    },
+    {
+      "id": "T11",
+      "pergunta": "O que é o Ligue 180?",
+      "tipo": "direta",
+      "id_esperado": "COM-003"
+    },
+    {
+      "id": "T12",
+      "pergunta": "Quando ir ao CRAS?",
+      "tipo": "reformulacao",
+      "id_esperado": "COM-004"
+    },
+    {
+      "id": "T13",
+      "pergunta": "",
+      "tipo": "limite_vazio",
+      "id_esperado": null,
+      "espera_erro": true,
+      "comportamento_esperado": "erro_entrada (vazio)"
+    },
+    {
+      "id": "T14",
+      "pergunta": "??? ### !!!",
+      "tipo": "limite_invalido",
+      "id_esperado": null,
+      "espera_erro": true,
+      "comportamento_esperado": "erro_entrada (só símbolos)"
+    },
+    {
+      "id": "T15",
+      "pergunta": "Como conquistar Marte com foguete particular?",
+      "tipo": "fora_tema",
+      "id_esperado": null,
+      "espera_sem_correspondencia": true,
+      "comportamento_esperado": "sem_correspondencia"
+    },
+    {
+      "id": "T16",
+      "pergunta": "Preciso de informação sobre carteira de identidade e carteira de trabalho",
+      "tipo": "ambiguo",
+      "id_esperado": null,
+      "espera_ambiguo_ou_multiplo": true,
+      "comportamento_esperado": "ambiguidade com >=2 candidatos (ex.: DOC-002 e DOC-005)"
+    }
+  ]
+}

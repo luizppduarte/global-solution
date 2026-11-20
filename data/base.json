@@ -1,0 +1,252 @@
+{
+  "versao": "1.1",
+  "assistente": "Citizen Assist AI",
+  "aviso_geral": "Este assistente NÃO é um canal oficial de órgãos públicos. Confirme sempre as informações nas fontes citadas antes de agir.",
+  "temas": [
+    "documentacao",
+    "servicos_publicos",
+    "orientacao_comunitaria"
+  ],
+  "grafo_temas": {
+    "documentacao": {
+      "servicos_publicos": 1,
+      "orientacao_comunitaria": 3
+    },
+    "servicos_publicos": {
+      "documentacao": 1,
+      "orientacao_comunitaria": 2
+    },
+    "orientacao_comunitaria": {
+      "servicos_publicos": 2,
+      "documentacao": 3
+    }
+  },
+  "grafo_navegacao": {
+    "documentacao": {"cpf": 1, "rg_cin": 1, "titulo_eleitor": 1, "cnh": 1, "ctps": 1, "govbr": 1},
+    "servicos_publicos": {"cadunico": 1, "bolsa_familia": 1, "inss": 1, "sus": 1, "consumidor": 1},
+    "orientacao_comunitaria": {"procon": 1, "disque100": 1, "ligue180": 1, "cras": 1, "educacao": 1, "acessibilidade": 1},
+    "cpf": {"documentacao": 1, "govbr": 1, "sus": 2},
+    "rg_cin": {"documentacao": 1, "cpf": 2, "titulo_eleitor": 2},
+    "titulo_eleitor": {"documentacao": 1, "rg_cin": 2},
+    "cnh": {"documentacao": 1, "rg_cin": 2},
+    "ctps": {"documentacao": 1, "govbr": 1},
+    "govbr": {"documentacao": 1, "cpf": 1, "ctps": 1, "inss": 1, "cadunico": 2},
+    "cadunico": {"servicos_publicos": 1, "bolsa_familia": 1, "cras": 1, "govbr": 2},
+    "bolsa_familia": {"servicos_publicos": 1, "cadunico": 1, "cras": 2},
+    "inss": {"servicos_publicos": 1, "govbr": 1, "cpf": 2},
+    "sus": {"servicos_publicos": 1, "cpf": 2, "acessibilidade": 2},
+    "consumidor": {"servicos_publicos": 1, "procon": 1},
+    "procon": {"orientacao_comunitaria": 1, "consumidor": 1},
+    "disque100": {"orientacao_comunitaria": 1, "ligue180": 1},
+    "ligue180": {"orientacao_comunitaria": 1, "disque100": 1},
+    "cras": {"orientacao_comunitaria": 1, "cadunico": 1, "bolsa_familia": 2, "acessibilidade": 2},
+    "educacao": {"orientacao_comunitaria": 1, "cras": 2},
+    "acessibilidade": {"orientacao_comunitaria": 1, "sus": 2, "cras": 2}
+  },
+  "orientacoes": [
+    {
+      "id": "DOC-001",
+      "tema": "documentacao",
+      "subtema": "cpf",
+      "pergunta": "Como consultar ou regularizar o CPF?",
+      "palavras_chave": ["cpf", "consulta", "regularizar", "situação cadastral", "receita"],
+      "sinonimos": ["cadastro de pessoa física", "situação do cpf"],
+      "orientacao": "A consulta da situação cadastral do CPF pode ser feita no site da Receita Federal. Em caso de pendência, siga as orientações oficiais para regularização (atualização cadastral ou atendimento). Tenha em mãos documentos de identificação.",
+      "referencia": "https://www.gov.br/receitafederal/pt-br/assuntos/cadastros/cpf",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "DOC-002",
+      "tema": "documentacao",
+      "subtema": "rg_cin",
+      "pergunta": "O que é a Carteira de Identidade Nacional (CIN) e como solicitar?",
+      "palavras_chave": ["rg", "cin", "identidade", "carteira de identidade", "documento de identidade"],
+      "sinonimos": ["registro geral", "documento pessoal", "cin rg"],
+      "orientacao": "A Carteira de Identidade Nacional (CIN) é o documento de identidade unificado. A solicitação é feita pelos órgãos de identificação estaduais. Verifique o portal do seu estado ou do governo federal para agendamento, documentos exigidos e taxas.",
+      "referencia": "https://www.gov.br/pt-br/servicos/obter-a-carteira-de-identidade-nacional",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "DOC-003",
+      "tema": "documentacao",
+      "subtema": "titulo_eleitor",
+      "pergunta": "Como tirar ou regularizar o título de eleitor?",
+      "palavras_chave": ["título", "eleitor", "eleitoral", "tse", "voto", "alistamento"],
+      "sinonimos": ["titulo de eleitor", "zona eleitoral"],
+      "orientacao": "O título de eleitor pode ser solicitado ou regularizado pelo Tribunal Superior Eleitoral (TSE) e pelos tribunais regionais. Use o autoatendimento eleitoral online ou procure o cartório eleitoral da sua zona. Confira prazos e documentos no site oficial.",
+      "referencia": "https://www.tse.jus.br/eleitor/titulo-e-local-de-votacao",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "DOC-004",
+      "tema": "documentacao",
+      "subtema": "cnh",
+      "pergunta": "Como renovar a CNH?",
+      "palavras_chave": ["cnh", "carteira de motorista", "renovar", "detran", "habilitação"],
+      "sinonimos": ["carteira nacional de habilitação", "renovação de cnh"],
+      "orientacao": "A renovação da CNH é feita pelo DETRAN do seu estado. Em geral envolve exame médico, pagamento de taxas e, quando aplicável, curso de reciclagem. Consulte o portal do DETRAN estadual para agendar e listar documentos.",
+      "referencia": "https://www.gov.br/pt-br/servicos/renovar-a-carteira-nacional-de-habilitacao-cnh",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "DOC-005",
+      "tema": "documentacao",
+      "subtema": "ctps",
+      "pergunta": "O que é a Carteira de Trabalho Digital e como acessar?",
+      "palavras_chave": ["ctps", "carteira de trabalho", "trabalho digital", "emprego"],
+      "sinonimos": ["carteira profissional", "trabalho digital", "ctps digital"],
+      "orientacao": "A Carteira de Trabalho Digital substitui a versão física para a maioria dos casos. Acesse pelo aplicativo ou pelo portal gov.br, com conta gov.br. Lá é possível consultar contratos, salários e anotações do empregador.",
+      "referencia": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/carteira-de-trabalho",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "DOC-006",
+      "tema": "documentacao",
+      "subtema": "govbr",
+      "pergunta": "Como criar uma conta gov.br?",
+      "palavras_chave": ["gov.br", "conta", "login", "cadastro", "acesso digital", "govbr"],
+      "sinonimos": ["conta governo", "login governo"],
+      "orientacao": "A conta gov.br é a porta de entrada para vários serviços federais. Crie o cadastro no portal oficial, valide a identidade conforme o nível de confiança exigido (bronze, prata ou ouro) e use o mesmo login em aplicativos do governo.",
+      "referencia": "https://www.gov.br/governodigital/pt-br/identidade/conta-gov-br",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "SRV-001",
+      "tema": "servicos_publicos",
+      "subtema": "cadunico",
+      "pergunta": "O que é o Cadastro Único e para que serve?",
+      "palavras_chave": ["cadunico", "cadastro único", "cadastro unico", "benefício", "mds"],
+      "sinonimos": ["cadastro unico", "cad único"],
+      "orientacao": "O Cadastro Único (CadÚnico) reúne dados de famílias de baixa renda e é usado para acesso a programas sociais. A inscrição ou atualização é feita no CRAS ou pontos de atendimento da sua cidade. Leve documentos de todos os membros da família.",
+      "referencia": "https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "SRV-002",
+      "tema": "servicos_publicos",
+      "subtema": "bolsa_familia",
+      "pergunta": "Como saber se tenho direito ao Bolsa Família?",
+      "palavras_chave": ["bolsa família", "bolsa familia", "benefício", "auxílio", "renda"],
+      "sinonimos": ["auxílio brasil", "programa bolsa família"],
+      "orientacao": "O Bolsa Família exige CadÚnico atualizado e critérios de renda definidos pelo governo. Consulte a situação pelo aplicativo oficial, pelo portal gov.br ou no CRAS. A elegibilidade depende das regras vigentes e da atualização cadastral.",
+      "referencia": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "SRV-003",
+      "tema": "servicos_publicos",
+      "subtema": "inss",
+      "pergunta": "Como agendar atendimento ou consultar benefícios do INSS?",
+      "palavras_chave": ["inss", "aposentadoria", "benefício", "meu inss", "previdência"],
+      "sinonimos": ["previdencia social", "agendamento inss"],
+      "orientacao": "Use o aplicativo ou site Meu INSS (com conta gov.br) para consultar extratos, solicitar benefícios e agendar atendimento. Em dúvidas sobre documentos e prazos, confira as orientações oficiais do INSS antes de se deslocar a uma agência.",
+      "referencia": "https://www.gov.br/inss/pt-br/saiba-mais/seu-login-na-gov-br-com-selo-prata-ou-ouro",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "SRV-004",
+      "tema": "servicos_publicos",
+      "subtema": "sus",
+      "pergunta": "Como obter o Cartão Nacional de Saúde (Cartão SUS)?",
+      "palavras_chave": ["sus", "cartão sus", "cartao sus", "saúde", "ubs"],
+      "sinonimos": ["cartão nacional de saúde", "posto de saúde"],
+      "orientacao": "O Cartão Nacional de Saúde identifica o cidadão no SUS. Em geral é emitido na UBS (posto de saúde) do seu bairro, com documento de identidade e CPF. Algumas localidades também oferecem emissão online — confirme na secretaria municipal de saúde.",
+      "referencia": "https://www.gov.br/saude/pt-br/composicao/seidigi/cns",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "SRV-005",
+      "tema": "servicos_publicos",
+      "subtema": "consumidor",
+      "pergunta": "Como registrar uma reclamação no Consumidor.gov.br?",
+      "palavras_chave": ["consumidor", "reclamação", "reclamacao", "empresa", "consumo"],
+      "sinonimos": ["reclame aqui governo", "plataforma consumidor"],
+      "orientacao": "No portal Consumidor.gov.br você registra reclamações contra empresas participantes. Crie conta, descreva o problema com clareza e anexe comprovantes. O canal é gratuito e acompanha o prazo de resposta da empresa.",
+      "referencia": "https://www.consumidor.gov.br",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "COM-001",
+      "tema": "orientacao_comunitaria",
+      "subtema": "procon",
+      "pergunta": "Quando procurar o Procon?",
+      "palavras_chave": ["procon", "direito do consumidor", "reclamação", "compra", "produto"],
+      "sinonimos": ["defesa do consumidor", "órgão de proteção"],
+      "orientacao": "Procure o Procon quando houver problema de consumo não resolvido com a empresa (produto com defeito, cobrança indevida, publicidade enganosa). Leve notas fiscais e protocolos. Você também pode tentar antes o Consumidor.gov.br.",
+      "referencia": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "COM-002",
+      "tema": "orientacao_comunitaria",
+      "subtema": "disque100",
+      "pergunta": "O que é o Disque 100?",
+      "palavras_chave": ["disque 100", "denúncia", "denuncia", "direitos humanos", "violência"],
+      "sinonimos": ["denúncia direitos humanos", "ligue 100"],
+      "orientacao": "O Disque 100 é o canal nacional para denúncias de violações de direitos humanos. O atendimento é gratuito e pode ser anônimo. Em emergência com risco imediato, ligue também 190 (polícia).",
+      "referencia": "https://www.gov.br/mdh/pt-br/disque100",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "COM-003",
+      "tema": "orientacao_comunitaria",
+      "subtema": "ligue180",
+      "pergunta": "Para que serve o Ligue 180?",
+      "palavras_chave": ["180", "ligue 180", "violência doméstica", "violencia domestica", "mulher"],
+      "sinonimos": ["central da mulher", "violencia contra mulher"],
+      "orientacao": "O Ligue 180 é a Central de Atendimento à Mulher: orienta sobre violência doméstica e familiar, direitos e rede de proteção. Em risco imediato, ligue 190. Guarde evidências e busque apoio em delegacias especializadas quando possível.",
+      "referencia": "https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres/ligue-180",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": false
+    },
+    {
+      "id": "COM-004",
+      "tema": "orientacao_comunitaria",
+      "subtema": "cras",
+      "pergunta": "O que faz o CRAS e quando procurar?",
+      "palavras_chave": ["cras", "assistência social", "assistencia social", "família", "proteção"],
+      "sinonimos": ["centro de referência", "assistencia social"],
+      "orientacao": "O CRAS (Centro de Referência de Assistência Social) oferece acompanhamento a famílias em situação de vulnerabilidade, orientação sobre benefícios e encaminhamentos. Procure a unidade do seu território com documentos pessoais.",
+      "referencia": "https://www.gov.br/mds/pt-br/acoes-e-programas/suas",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "COM-005",
+      "tema": "orientacao_comunitaria",
+      "subtema": "educacao",
+      "pergunta": "Onde buscar informações sobre matrícula escolar e EJA?",
+      "palavras_chave": ["matrícula", "matricula", "escola", "eja", "educação", "ensino"],
+      "sinonimos": ["educacao de jovens e adultos", "vaga escolar"],
+      "orientacao": "Matrículas na rede pública e programas como EJA (Educação de Jovens e Adultos) são organizados pelas secretarias municipais ou estaduais de educação. Consulte o portal da sua cidade/estado e a escola de referência do bairro para prazos e documentos.",
+      "referencia": "https://www.gov.br/mec/pt-br",
+      "data_verificacao": "2026-11-14",
+      "requer_confirmacao": true
+    },
+    {
+      "id": "COM-006",
+      "tema": "orientacao_comunitaria",
+      "subtema": "acessibilidade",
+      "pergunta": "Quais direitos básicos a Lei Brasileira de Inclusão garante?",
+      "palavras_chave": ["inclusão", "inclusao", "deficiência", "deficiencia", "acessibilidade", "lbi"],
+      "sinonimos": ["lei brasileira de inclusão", "pessoa com deficiência"],
+      "orientacao": "A Lei Brasileira de Inclusão (Lei 13.146/2015) trata de direitos da pessoa com deficiência, incluindo acessibilidade, atenção à saúde e não discriminação. Para orientação prática, procure órgãos de direitos humanos, CRAS/CREAS ou canais oficiais do governo.",
+      "referencia": "https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia",
+      "data_verificacao": "2026-11-15",
+      "requer_confirmacao": true
+    }
+  ]
+}

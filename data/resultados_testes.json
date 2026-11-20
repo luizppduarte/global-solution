@@ -1,0 +1,284 @@
+{
+  "modelo_resposta": "A",
+  "total_testes": 16,
+  "acertos": 16,
+  "erros": 0,
+  "taxa_acerto_percentual": 100.0,
+  "tempo_medio_s": 0.001972,
+  "tempo_medio_ms": 1.972,
+  "observacao": "Taxa calculada com critérios estritos (ambiguidade exige >=2 candidatos). Valores próximos de 100% em base pequena devem ser interpretados com cautela.",
+  "registros": [
+    {
+      "id_teste": "T01",
+      "pergunta": "Como consultar meu CPF?",
+      "tipo": "direta",
+      "esperado_id": "DOC-001",
+      "resposta_esperada": "DOC-001: Como consultar ou regularizar o CPF? | A consulta da situação cadastral do CPF pode ser feita no site da Receita Federal. Em caso de pendência, siga as orientações oficiais para regularização (atuali...",
+      "resposta_obtida": "status=ok; ids=['DOC-001']; candidatos=['DOC-001']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como consultar ou regularizar o CPF? | Orientação: A consulta da situação cadastral do CPF pode ser feita no site da Receita Federal. Em ca...",
+      "obtido_ids": [
+        "DOC-001"
+      ],
+      "candidatos": [
+        "DOC-001"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002734
+    },
+    {
+      "id_teste": "T02",
+      "pergunta": "Quero renovar a carteira de motorista",
+      "tipo": "reformulacao",
+      "esperado_id": "DOC-004",
+      "resposta_esperada": "DOC-004: Como renovar a CNH? | A renovação da CNH é feita pelo DETRAN do seu estado. Em geral envolve exame médico, pagamento de taxas e, quando aplicável, curso de reciclagem. Consulte o por...",
+      "resposta_obtida": "status=ambiguo; ids=['DOC-004']; candidatos=['DOC-004', 'DOC-005', 'DOC-002']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como renovar a CNH? | Orientação: A renovação da CNH é feita pelo DETRAN do seu estado. Em geral envolve exame médico, pagamento de taxas e...",
+      "obtido_ids": [
+        "DOC-004"
+      ],
+      "candidatos": [
+        "DOC-004",
+        "DOC-005",
+        "DOC-002"
+      ],
+      "status": "ambiguo",
+      "acerto": true,
+      "tempo_s": 0.002217
+    },
+    {
+      "id_teste": "T03",
+      "pergunta": "Como criar conta no gov.br?",
+      "tipo": "direta",
+      "esperado_id": "DOC-006",
+      "resposta_esperada": "DOC-006: Como criar uma conta gov.br? | A conta gov.br é a porta de entrada para vários serviços federais. Crie o cadastro no portal oficial, valide a identidade conforme o nível de confiança exigido ...",
+      "resposta_obtida": "status=ok; ids=['DOC-006']; candidatos=['DOC-006', 'SRV-005']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como criar uma conta gov.br? | Orientação: A conta gov.br é a porta de entrada para vários serviços federais. Crie o cadastro no portal ofi...",
+      "obtido_ids": [
+        "DOC-006"
+      ],
+      "candidatos": [
+        "DOC-006",
+        "SRV-005"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002132
+    },
+    {
+      "id_teste": "T04",
+      "pergunta": "O que é Cadastro Único?",
+      "tipo": "direta",
+      "esperado_id": "SRV-001",
+      "resposta_esperada": "SRV-001: O que é o Cadastro Único e para que serve? | O Cadastro Único (CadÚnico) reúne dados de famílias de baixa renda e é usado para acesso a programas sociais. A inscrição ou atualização é feita no CRAS ou pont...",
+      "resposta_obtida": "status=ok; ids=['SRV-001']; candidatos=['SRV-001', 'DOC-006', 'DOC-001']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: O que é o Cadastro Único e para que serve? | Orientação: O Cadastro Único (CadÚnico) reúne dados de famílias de baixa renda e é usado para ...",
+      "obtido_ids": [
+        "SRV-001"
+      ],
+      "candidatos": [
+        "SRV-001",
+        "DOC-006",
+        "DOC-001"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002111
+    },
+    {
+      "id_teste": "T05",
+      "pergunta": "Tenho direito ao Bolsa Família?",
+      "tipo": "reformulacao",
+      "esperado_id": "SRV-002",
+      "resposta_esperada": "SRV-002: Como saber se tenho direito ao Bolsa Família? | O Bolsa Família exige CadÚnico atualizado e critérios de renda definidos pelo governo. Consulte a situação pelo aplicativo oficial, pelo portal gov.br ou no CRA...",
+      "resposta_obtida": "status=ok; ids=['SRV-002']; candidatos=['SRV-002', 'COM-001', 'COM-004']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como saber se tenho direito ao Bolsa Família? | Orientação: O Bolsa Família exige CadÚnico atualizado e critérios de renda definidos pelo g...",
+      "obtido_ids": [
+        "SRV-002"
+      ],
+      "candidatos": [
+        "SRV-002",
+        "COM-001",
+        "COM-004"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002221
+    },
+    {
+      "id_teste": "T06",
+      "pergunta": "Como usar o Meu INSS?",
+      "tipo": "reformulacao",
+      "esperado_id": "SRV-003",
+      "resposta_esperada": "SRV-003: Como agendar atendimento ou consultar benefícios do INSS? | Use o aplicativo ou site Meu INSS (com conta gov.br) para consultar extratos, solicitar benefícios e agendar atendimento. Em dúvidas sobre documentos e prazos, ...",
+      "resposta_obtida": "status=ok; ids=['SRV-003']; candidatos=['SRV-003']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como agendar atendimento ou consultar benefícios do INSS? | Orientação: Use o aplicativo ou site Meu INSS (com conta gov.br) para consultar...",
+      "obtido_ids": [
+        "SRV-003"
+      ],
+      "candidatos": [
+        "SRV-003"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002049
+    },
+    {
+      "id_teste": "T07",
+      "pergunta": "Como tirar o cartão SUS?",
+      "tipo": "direta",
+      "esperado_id": "SRV-004",
+      "resposta_esperada": "SRV-004: Como obter o Cartão Nacional de Saúde (Cartão SUS)? | O Cartão Nacional de Saúde identifica o cidadão no SUS. Em geral é emitido na UBS (posto de saúde) do seu bairro, com documento de identidade e CPF. Algumas loc...",
+      "resposta_obtida": "status=ok; ids=['SRV-004']; candidatos=['SRV-004']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como obter o Cartão Nacional de Saúde (Cartão SUS)? | Orientação: O Cartão Nacional de Saúde identifica o cidadão no SUS. Em geral é emitid...",
+      "obtido_ids": [
+        "SRV-004"
+      ],
+      "candidatos": [
+        "SRV-004"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002119
+    },
+    {
+      "id_teste": "T08",
+      "pergunta": "Quero reclamar de uma empresa no consumidor.gov",
+      "tipo": "reformulacao",
+      "esperado_id": "SRV-005",
+      "resposta_esperada": "SRV-005: Como registrar uma reclamação no Consumidor.gov.br? | No portal Consumidor.gov.br você registra reclamações contra empresas participantes. Crie conta, descreva o problema com clareza e anexe comprovantes. O canal é...",
+      "resposta_obtida": "status=ok; ids=['SRV-005']; candidatos=['SRV-005', 'COM-001', 'DOC-006']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Como registrar uma reclamação no Consumidor.gov.br? | Orientação: No portal Consumidor.gov.br você registra reclamações contra empresas par...",
+      "obtido_ids": [
+        "SRV-005"
+      ],
+      "candidatos": [
+        "SRV-005",
+        "COM-001",
+        "DOC-006"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002318
+    },
+    {
+      "id_teste": "T09",
+      "pergunta": "Quando procurar o Procon?",
+      "tipo": "direta",
+      "esperado_id": "COM-001",
+      "resposta_esperada": "COM-001: Quando procurar o Procon? | Procure o Procon quando houver problema de consumo não resolvido com a empresa (produto com defeito, cobrança indevida, publicidade enganosa). Leve notas fiscai...",
+      "resposta_obtida": "status=ok; ids=['COM-001']; candidatos=['COM-001']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Quando procurar o Procon? | Orientação: Procure o Procon quando houver problema de consumo não resolvido com a empresa (produto com defeito...",
+      "obtido_ids": [
+        "COM-001"
+      ],
+      "candidatos": [
+        "COM-001"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002233
+    },
+    {
+      "id_teste": "T10",
+      "pergunta": "Para que serve o Disque 100?",
+      "tipo": "direta",
+      "esperado_id": "COM-002",
+      "resposta_esperada": "COM-002: O que é o Disque 100? | O Disque 100 é o canal nacional para denúncias de violações de direitos humanos. O atendimento é gratuito e pode ser anônimo. Em emergência com risco imediato, ...",
+      "resposta_obtida": "status=ok; ids=['COM-002']; candidatos=['COM-002']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: O que é o Disque 100? | Orientação: O Disque 100 é o canal nacional para denúncias de violações de direitos humanos. O atendimento é gratui...",
+      "obtido_ids": [
+        "COM-002"
+      ],
+      "candidatos": [
+        "COM-002"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002257
+    },
+    {
+      "id_teste": "T11",
+      "pergunta": "O que é o Ligue 180?",
+      "tipo": "direta",
+      "esperado_id": "COM-003",
+      "resposta_esperada": "COM-003: Para que serve o Ligue 180? | O Ligue 180 é a Central de Atendimento à Mulher: orienta sobre violência doméstica e familiar, direitos e rede de proteção. Em risco imediato, ligue 190. Guarde...",
+      "resposta_obtida": "status=ok; ids=['COM-003']; candidatos=['COM-003', 'COM-002']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: Para que serve o Ligue 180? | Orientação: O Ligue 180 é a Central de Atendimento à Mulher: orienta sobre violência doméstica e familiar, di...",
+      "obtido_ids": [
+        "COM-003"
+      ],
+      "candidatos": [
+        "COM-003",
+        "COM-002"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.002089
+    },
+    {
+      "id_teste": "T12",
+      "pergunta": "Quando ir ao CRAS?",
+      "tipo": "reformulacao",
+      "esperado_id": "COM-004",
+      "resposta_esperada": "COM-004: O que faz o CRAS e quando procurar? | O CRAS (Centro de Referência de Assistência Social) oferece acompanhamento a famílias em situação de vulnerabilidade, orientação sobre benefícios e encaminhamen...",
+      "resposta_obtida": "status=ok; ids=['COM-004']; candidatos=['COM-004']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: O que faz o CRAS e quando procurar? | Orientação: O CRAS (Centro de Referência de Assistência Social) oferece acompanhamento a famílias em ...",
+      "obtido_ids": [
+        "COM-004"
+      ],
+      "candidatos": [
+        "COM-004"
+      ],
+      "status": "ok",
+      "acerto": true,
+      "tempo_s": 0.001996
+    },
+    {
+      "id_teste": "T13",
+      "pergunta": "",
+      "tipo": "limite_vazio",
+      "esperado_id": null,
+      "resposta_esperada": "erro_entrada (vazio)",
+      "resposta_obtida": "status=erro_entrada; ids=[]; candidatos=[]; texto=Entrada vazia. Digite uma pergunta ou escolha uma opção do menu.",
+      "obtido_ids": [],
+      "candidatos": [],
+      "status": "erro_entrada",
+      "acerto": true,
+      "tempo_s": 3e-06
+    },
+    {
+      "id_teste": "T14",
+      "pergunta": "??? ### !!!",
+      "tipo": "limite_invalido",
+      "esperado_id": null,
+      "resposta_esperada": "erro_entrada (só símbolos)",
+      "resposta_obtida": "status=erro_entrada; ids=[]; candidatos=[]; texto=Entrada inválida (apenas símbolos). Use palavras ou números.",
+      "obtido_ids": [],
+      "candidatos": [],
+      "status": "erro_entrada",
+      "acerto": true,
+      "tempo_s": 2e-06
+    },
+    {
+      "id_teste": "T15",
+      "pergunta": "Como conquistar Marte com foguete particular?",
+      "tipo": "fora_tema",
+      "esperado_id": null,
+      "resposta_esperada": "sem_correspondencia",
+      "resposta_obtida": "status=sem_correspondencia; ids=[]; candidatos=[]; texto=Não encontrei uma orientação confiável para: \"Como conquistar Marte com foguete particular?\". | Não invento instruções fora da base verificada. | Temas disponíveis: documentacao, orientacao_comunitaria, servicos_publicos. | Tente reformular com palavras-chave (ex.: CPF, INSS, ...",
+      "obtido_ids": [],
+      "candidatos": [],
+      "status": "sem_correspondencia",
+      "acerto": true,
+      "tempo_s": 0.002336
+    },
+    {
+      "id_teste": "T16",
+      "pergunta": "Preciso de informação sobre carteira de identidade e carteira de trabalho",
+      "tipo": "ambiguo",
+      "esperado_id": null,
+      "resposta_esperada": "ambiguidade com >=2 candidatos (ex.: DOC-002 e DOC-005)",
+      "resposta_obtida": "status=ambiguo; ids=['DOC-005']; candidatos=['DOC-005', 'DOC-002', 'DOC-004']; texto=Sou o Citizen Assist AI, um assistente introdutório de orientação cidadã. | Não substituo canais oficiais de órgãos públicos. |  | Sobre: O que é a Carteira de Trabalho Digital e como acessar? | Orientação: A Carteira de Trabalho Digital substitui a versão física para a maiori...",
+      "obtido_ids": [
+        "DOC-005"
+      ],
+      "candidatos": [
+        "DOC-005",
+        "DOC-002",
+        "DOC-004"
+      ],
+      "status": "ambiguo",
+      "acerto": true,
+      "tempo_s": 0.002728
+    }
+  ]
+}
